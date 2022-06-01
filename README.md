@@ -1,3 +1,4 @@
 # GamerDog Modpack
-## The official modpack for the GamerDog minecraft server!
-For instructions on installing the modpack on your system, click [here](https://github.com/TheGamerCanine/GamerDog-Modpack/wiki/Installation)
+For instructions on installing the modpack on your system, click [here](https://github.com/TheGamerCanine/GamerDog-Modpack/wiki/Installation).
+
+This modpack is intended for version 1.12.2 of Minecraft, and includes a number of mods that are intended specifically to add more content to the game without overwhelming the user as I feel many modpacks have a tendency of doing. The list of mods included are listed [here](https://github.com/TheGamerCanine/GamerDog-Modpack/blob/main/credit.txt).
