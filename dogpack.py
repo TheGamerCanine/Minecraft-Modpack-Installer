@@ -8,10 +8,12 @@ import pathlib
 try:    
     from alive_progress import alive_bar
     import requests
+    import texteditor
 except ModuleNotFoundError:
     os.system('pip3 install -r requirements.txt')
     from alive_progress import alive_bar
     import requests
+    import texteditor
 
 # Identify Operating System
 if platform.system() == 'Windows':
@@ -106,7 +108,10 @@ else:
 readme = input('Open credit.txt? [y/n]: ')
 if readme == 'y':
     print('Done.')
-    sys.exit(webbrowser.open('credit.txt'))
+    if platform.system() == 'Linux':
+        texteditor.open(filename='credit.txt')
+    else:
+        webbrowser.open('credit.txt')
 
 # Finish
 print('Done.')
