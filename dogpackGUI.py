@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from tkinter import filedialog
 from tkinter.ttk import Progressbar
 import urllib.request
 import platform
@@ -9,12 +10,10 @@ import sys
 import webbrowser
 import pathlib
 try:    
-    from alive_progress import alive_bar
-    import requests
+    import texteditor
 except ModuleNotFoundError:
     os.system('pip3 install -r requirements.txt')
-    from alive_progress import alive_bar
-    import requests
+    import texteditor
 
 
 def install_forge():
@@ -25,7 +24,7 @@ def install_forge():
     urllib.request.urlretrieve('https://maven.minecraftforge.net/net/minecraftforge/forge/1.12.2-14.23.5.2859/forge-1.12.2-14.23.5.2859-installer.jar', 'forge-1.12.2.jar')
     subprocess.call(['java', '-jar', 'forge-1.12.2.jar'])
     os.remove('forge-1.12.2.jar')
-    print('Forge 1.12.2 installed.')
+    print('Done.')
 
 def install_mods():
     # Determine what needs to be installed
@@ -50,8 +49,10 @@ def install_mods():
                 mod = modstoinstall[x]
                 urllib.request.urlretrieve(modpackurl[mod], (moddirectory+modpacknames[mod]))
                 installmodprogress['value'] += progress_step
+                print('Downloaded '+modpacknames[mod])
                 progwindow.update()
             messagebox.showinfo(title='Finished.', message='All mods installed successfully.')
+            print('Done.')
             # Kill progress bar window
             progwindow.destroy()
         else:
@@ -64,11 +65,39 @@ def clear_mods():
                 os.remove(moddirectory + existmodsfolder[x])
     messagebox.showinfo(title='Finished.', message='Cleared all preexisting mods from mods folder successfully.')
 
-def creditstxt():
-    #credwindow = Toplevel(root)
-    credread = open('credit.txt', 'r')
-    print(credread.read())
-    credread.close()
+def browse_button():
+    global extract_dir
+    extract_dir = filedialog.askdirectory()
+    extwindow.update()
+    print(extract_dir)
+
+def extract_to_dir():
+    Label(extwindow, text='Extracting...').grid(row=3, column=0)
+    extractmodprogress = Progressbar(extwindow, orient=HORIZONTAL, length=100, mode='determinate')
+    extractmodprogress.grid(row=4, column=0)
+    progress_step = float(100/len(modpacknames))
+    for x in range(len(modpacknames)):
+        urllib.request.urlretrieve(modpackurl[x], (extract_dir+'/'+modpacknames[x]))
+        extractmodprogress['value'] += progress_step
+        extwindow.update()
+    messagebox.showinfo(title='Finished.', message='Finished extracting mods to the desired folder.')
+    extwindow.destroy()
+
+def extract_mods():
+    global extwindow
+    extwindow = Toplevel(root)
+    extwindow.transient(root)
+    extract_dir = StringVar()
+    Label(extwindow, text='Choose folder to extract to.').grid(row=0, column=0)
+    Entry(extwindow, textvariable=extract_dir, state='disabled', width=30).grid(row=1, column=0)
+    Button(extwindow, text="...", command=browse_button).grid(row=1, column=3)
+    Button(extwindow, text='Extract', command=extract_to_dir).grid(row=2, column=0, pady=2)
+
+def credits_txt():
+    if platform.system() == 'Linux':
+        texteditor.open(filename='credit.txt')
+    else:
+        webbrowser.open('credit.txt')
 
 def dogsite():
     webbrowser.open('toucam.live')
@@ -76,18 +105,19 @@ def dogsite():
 
 # Set tkinter and window properties
 root = Tk()
-root.geometry('640x240')
+root.geometry('640x290')
 root.title('GamerDog Modpack')
 root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='dogpack.png'))
 
 # Set title and buttons for window
-Label(text='GamerDog Modpack', font=('System', 30, 'bold')).pack()
-Button(text='Install Forge 1.12.2', command=install_forge).pack()
-Button(text='Install Mods', command=install_mods).pack()
+Label(text='GamerDog Modpack', font=('System', 30, 'bold')).pack(pady=5)
+Button(text='Install Forge 1.12.2', command=install_forge).pack(pady=3)
+Button(text='Install Mods', command=install_mods).pack(pady=3)
 clearmodsb = Button(text="Clear Mods Folder", command=clear_mods)
-clearmodsb.pack()
-Button(text='View credits.txt', command=creditstxt).pack()
-Button(text='Visit Website', command=dogsite).pack()
+clearmodsb.pack(pady=3)
+Button(text='Extract Mods [BETA]', command=extract_mods).pack(pady=3)
+Button(text='View credits.txt', command=credits_txt).pack(pady=3)
+Button(text='Visit Website', command=dogsite).pack(pady=3)
 
 
 # Identify Operating System
