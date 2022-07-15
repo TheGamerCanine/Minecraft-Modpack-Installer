@@ -11,6 +11,7 @@ import sys
 import webbrowser
 import pathlib
 import time
+import shutil
 try:
     from ttkthemes import ThemedTk
 except ModuleNotFoundError:
@@ -21,6 +22,8 @@ except ModuleNotFoundError:
 def define_mods():
     global modpackURL
     global modpackNames
+    global modpackFileDir
+    # Define folder containing modpack info, dump names and URLs for the mods into their own list elements.
     modpackFileDir = f'modpackfiles/{modpackOption.get()}'
     with open(f'{modpackFileDir}/modpackURL', 'r') as f:
         modpackURL = [line.strip() for line in f]
@@ -29,27 +32,18 @@ def define_mods():
 
 def install_modloader():
     # Define a folder the modloader should be installed to, set a download URL and determine whether there are logs that need to be deleted or not.
-    if modpackOption.get() == 'Official Dogpack (1.12.2)':
-        modloaderFolder = '1.12.2-forge-14.23.5.2859'
-        modloaderURL = 'https://maven.minecraftforge.net/net/minecraftforge/forge/1.12.2-14.23.5.2859/forge-1.12.2-14.23.5.2859-installer.jar'
-        delLog = 1
-    elif modpackOption.get() == 'Official Dogpack (1.18.2)':
-        modloaderFolder = '1.18.2-forge-40.1.52'
-        modloaderURL = 'https://maven.minecraftforge.net/net/minecraftforge/forge/1.18.2-40.1.52/forge-1.18.2-40.1.52-installer.jar'
-        delLog = 1
-    elif modpackOption.get() == 'QoL Doggo (1.19)':
-        modloaderFolder = 'fabric-loader-0.14.8-1.19'
-        modloaderURL = 'https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.0/fabric-installer-0.11.0.jar'
-        delLog = 0
+    modpackFileDir = f'modpackfiles/{modpackOption.get()}'
+    with open(f'{modpackFileDir}/modloaderInfo', 'r') as f:
+        modloaderInfo = [line.strip() for line in f]
     # Install necessary modloader
-    if os.path.exists(versionDirectory + modloaderFolder) == True:
+    if os.path.exists(versionDirectory + modloaderInfo[0]) == True:
         modloaderInstalledDia = messagebox.askyesno(title='Modloader already installed.', message='Necessary modloader appears to already be installed. Continue anyways?')
         if modloaderInstalledDia == False:
             return
-    urllib.request.urlretrieve(modloaderURL, 'modloader.jar')
+    urllib.request.urlretrieve(modloaderInfo[1], 'modloader.jar')
     subprocess.call(['java', '-jar', 'modloader.jar'])
     os.remove('modloader.jar')
-    if delLog == 1:
+    if os.path.exists('installer.log'):
         os.remove('installer.log')
     print('Done.')
 
@@ -73,21 +67,34 @@ def install_mods():
         if installModsOkay == True:
             # Create new window to contain progress bar for install 
             progWindow = Toplevel(root)
+            progWindow.geometry('240x60')
             Label(progWindow, text=f'Installing {len(modsToInstall)} mods.').pack()
             installModProgress = Progressbar(progWindow, orient=HORIZONTAL, length=100, mode='determinate')
             installModProgress.pack()
             Button(progWindow, text='Cancel', command=progWindow.destroy).pack()
             startInstallTime = time.time()
-            progress_step = float(100/len(modsToInstall))
+            progressStep = float(100/len(modsToInstall))
             for x in range(len(modsToInstall)):
                 mod = modsToInstall[x]
                 urllib.request.urlretrieve(modpackURL[mod], (modDirectory+modpackNames[mod]))
-                installModProgress['value'] += progress_step
+                installModProgress['value'] += progressStep
                 print('Downloaded '+modpackNames[mod])
                 progWindow.update()
             endInstallTime = time.time()
             print('Finished in ' + str(round(endInstallTime-startInstallTime, 2)) + 's')
-            messagebox.showinfo(title='Finished.', message='All mods installed successfully.')
+            if os.path.exists(f'{modpackFileDir}/config'):
+                configNecessary = os.listdir(f'{modpackFileDir}/config')
+                configToInstall = []
+                for x in range(0,len(configNecessary)):
+                    if os.path.exists(f'{minecraftDirectory}/config/{configNecessary[x]}') == False:
+                        configToInstall.append(configNecessary[x])
+                if configToInstall == []:
+                    print('Configs already copied.')
+                else:
+                    print('Copying config files.')
+                    for x in range(0, len(configToInstall)):
+                        shutil.copytree(f'{modpackFileDir}/config/{configToInstall[x]}', f'{minecraftDirectory}config/{configToInstall[x]}')
+            messagebox.showinfo(title='Finished.', message='Modpack installed successfully.')
             print('Done.')
             # Kill progress bar window
             progWindow.destroy()
@@ -114,10 +121,10 @@ def extract_to_dir():
     Label(extWindow, text='Extracting...').grid(row=4, column=0)
     extractModProgress = Progressbar(extWindow, orient=HORIZONTAL, length=100, mode='determinate')
     extractModProgress.grid(row=5, column=0)
-    progress_step = float(100/len(modpackNames))
+    progressStep = float(100/len(modpackNames))
     for x in range(len(modpackNames)):
         urllib.request.urlretrieve(modpackURL[x], (extract_dir+'/'+modpackNames[x]))
-        extractModProgress['value'] += progress_step
+        extractModProgress['value'] += progressStep
         extWindow.update()
     messagebox.showinfo(title='Finished.', message='Finished extracting mods to the desired folder.')
     extWindow.destroy()
@@ -146,7 +153,7 @@ def wiki_view():
 # Set tkinter and window properties
 root = ThemedTk(theme='yaru')
 root.geometry('480x280')
-root.title('Dogcraft')
+root.title('Dogcraft Installer')
 root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='dogpack.png'))
 
 # Set menu functions
@@ -171,7 +178,7 @@ Label(root, text='Dogcraft Installer', font=('Arial', 30, 'bold')).pack(pady=5)
 Label(root, text='Modpack to Install', font=('Arial', 12)).pack(pady=2)
 modpackAvailable = os.listdir('modpackfiles')
 modpackOption = StringVar()
-modpackOption.set('Official Dogpack (1.18.2)')
+modpackOption.set('Dogcraft (1.18.2) (EXPANDED)')
 modpackSelector = OptionMenu(root, modpackOption, *modpackAvailable)
 modpackSelector.pack(pady=2)
 Label(root, text='Installation Options', font=('Arial', 12)).pack(pady=3)
