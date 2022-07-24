@@ -1,0 +1,15 @@
+ /|||||||||||||||||||||||||||||||||||||||||||||||||\
+|||/    ____  ____  __________  ___   ________ __\|||
+|||    / __ \/ __ \/ ____/ __ \/   | / ____/ //_/ |||
+|||   / / / / / / / / __/ /_/ / /| |/ /   / ,<    |||
+|||  / /_/ / /_/ / /_/ / ____/ ___ / /___/ /| |   |||
+||| /_____/\____/\____/_/   /_/  |_\____/_/ |_|   |||
+|||\                                             /|||
+ \|||||||||||||||||||||||||||||||||||||||||||||||||/
+
+This modpack contains 194 mods compiled to enhance the Minecraft experience significantly through a number of Quality of Life improvements and content expansions.
+The primary focus was to avoid overwhelming the player while offering enough new content to keep the player always discovering.
+
+DISCLAIMER:
+- This modpack is optimized for Singeplayer, unfortunately a few of these mods conflict or throw errors when ran on a forge server.
+- This modpack runs on Forge, although I plan to switch to Fabric in Dogpack Rewritten, which will also be optimized for multiplayer.

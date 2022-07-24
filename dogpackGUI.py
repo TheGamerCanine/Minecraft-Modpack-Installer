@@ -35,6 +35,9 @@ def install_modloader():
     modpackFileDir = f'modpackfiles/{modpackOption.get()}'
     with open(f'{modpackFileDir}/modloaderInfo', 'r') as f:
         modloaderInfo = [line.strip() for line in f]
+    # Alert the user if necessary
+    if len(modloaderInfo) >= 3:
+        messagebox.showwarning(title='Modloader Alert', message=modloaderInfo[2])
     # Install necessary modloader
     if os.path.exists(versionDirectory + modloaderInfo[0]) == True:
         modloaderInstalledDia = messagebox.askyesno(title='Modloader already installed.', message='Necessary modloader appears to already be installed. Continue anyways?')
@@ -178,7 +181,7 @@ Label(root, text='Dogcraft Installer', font=('Arial', 30, 'bold')).pack(pady=5)
 Label(root, text='Modpack to Install', font=('Arial', 12)).pack(pady=2)
 modpackAvailable = os.listdir('modpackfiles')
 modpackOption = StringVar()
-modpackOption.set('Dogcraft (1.18.2) (EXPANDED)')
+modpackOption.set('Dogcraft Rewritten (1.18.2)')
 modpackSelector = OptionMenu(root, modpackOption, *modpackAvailable)
 modpackSelector.pack(pady=2)
 Label(root, text='Installation Options', font=('Arial', 12)).pack(pady=3)
