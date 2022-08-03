@@ -1,0 +1,461 @@
+ /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
+|||/   ___  ____  ________  ___  _______ __    ___  _____      _____  _____________________  __ \|||
+|||   / _ \/ __ \/ ___/ _ \/ _ |/ ___/ //_/   / _ \/ __/ | /| / / _ \/  _/_  __/_  __/ __/ |/ /  |||
+|||  / // / /_/ / (_ / ___/ __ / /__/ ,<     / , _/ _/ | |/ |/ / , _// /  / /   / / / _//    /   |||
+||| /____/\____/\___/_/  /_/ |_\___/_/|_|   /_/|_/___/ |__/|__/_/|_/___/ /_/   /_/ /___/_/|_/    |||
+|||\                                                                                            /|||
+ \|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
+
+Program written and modpack compiled by TheGamerCanine
+
+
+    ## Mods ##
+
+Additional Additions by Dqu1J
+    - https://www.curseforge.com/minecraft/mc-mods/additional-additions
+Additional Bars by Gamma1772
+    - https://www.curseforge.com/minecraft/mc-mods/additional-bars-fabric
+Advanced Netherite by AutovwDev
+    - https://www.curseforge.com/minecraft/mc-mods/advanced-netherite-fabric
+Advancement Info by Giselbaer
+    - https://www.curseforge.com/minecraft/mc-mods/advancementinfo
+Advancements Debug by thetechnici4n
+    - https://www.curseforge.com/minecraft/mc-mods/advancements-debug
+Advancements Enlarger by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/advancements-enlarger
+Ambient Sounds 5 by CreativeMD
+    - https://www.curseforge.com/minecraft/mc-mods/ambientsounds
+Animatica by FoundationGames
+    - https://www.curseforge.com/minecraft/mc-mods/animatica
+AppleSkin by squeek502
+    - https://www.curseforge.com/minecraft/mc-mods/appleskin
+Architects Palette by Jsburg
+    - https://www.curseforge.com/minecraft/mc-mods/architects-palette-fabric
+Armor Sound Tweak by HeckinChloe
+    - https://www.curseforge.com/minecraft/mc-mods/armor-sound-tweak
+Artifacts by ochotonida
+    - https://www.curseforge.com/minecraft/mc-mods/artifacts
+AttributeFix by DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/attributefix
+Auth Me by Axieum
+    - https://www.curseforge.com/minecraft/mc-mods/auth-me
+AutoModpack by Skidam
+    - https://www.curseforge.com/minecraft/mc-mods/automodpack
+Axolotl Bucket Fix by colderlavalamp
+    - https://www.curseforge.com/minecraft/mc-mods/axolotl-bucket-fix
+Basic Shields by CrimsonDawn45
+    - https://www.curseforge.com/minecraft/mc-mods/basic-shields-fabric
+Bedspreads by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/bedspreads-fabric
+Better Beds by Motschen
+    - https://www.curseforge.com/minecraft/mc-mods/better-beds
+Better Biome Blend by FlonaTheMortal
+    - https://www.curseforge.com/minecraft/mc-mods/better-biome-blend
+Better End by paulevs (maintained by Quiqueck and Bulldog83)
+    - https://www.curseforge.com/minecraft/mc-mods/betterend
+BetterF3 by cominixo
+    - https://www.curseforge.com/minecraft/mc-mods/betterf3
+Better Mount HUD by Lortseam_
+    - https://www.curseforge.com/minecraft/mc-mods/better-mount-hud
+Better Nether by paulevs
+    - https://www.curseforge.com/minecraft/mc-mods/betternether
+Better Ping Display by Quintinity
+    - https://www.curseforge.com/minecraft/mc-mods/better-ping-display-fabric
+Better Than Mending by legobmw99
+    - https://www.curseforge.com/minecraft/mc-mods/better-than-mending
+Better Third Person by DreenDexTwitch
+    - https://www.curseforge.com/minecraft/mc-mods/better-third-person
+Better Villages by jtl-elisa
+    - https://www.curseforge.com/minecraft/mc-mods/better-village-fabric
+Blossom by yurisuika
+    - https://www.curseforge.com/minecraft/mc-mods/blossom
+Blur by tterrag1098 (ported to Fabric by Motschen)
+    - https://www.curseforge.com/minecraft/mc-mods/blur-fabric
+Boat Container by KxmischesDomi
+    - https://www.curseforge.com/minecraft/mc-mods/boat-container
+Boat Item View by 50ap5ud5
+    - https://www.curseforge.com/minecraft/mc-mods/boat-item-view
+Cake Chomps by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/cake-chomps-fabric
+Capybara by Coda1552 (ported to Fabric by ZestyBlaze)
+    - https://www.curseforge.com/minecraft/mc-mods/capybara-fabric
+Caracal Mod by AqUpd
+    - https://www.curseforge.com/minecraft/mc-mods/caracal-mod
+Carrier by GabrielHOlv
+    - https://www.curseforge.com/minecraft/mc-mods/carrier
+Chalk by mortuus_art (ported to Fabric by DaFuqsy)
+    - https://www.curseforge.com/minecraft/mc-mods/chalk-fabric
+Charm of Undying by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/charm-of-undying-fabric
+Chat Heads by dzwdz (maintained by Fourmisain)
+    - https://www.curseforge.com/minecraft/mc-mods/chat-heads
+Cherished Worlds by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/cherished-worlds-fabric
+ChickensShed by holmraven
+    - https://www.curseforge.com/minecraft/mc-mods/chickensshed
+Chimes by BlewberryPie
+    - https://www.curseforge.com/minecraft/mc-mods/chimes
+Chipped by WillowWorks Team
+    - https://www.curseforge.com/minecraft/mc-mods/chipped
+CleanCut by Rongmario
+    - https://www.curseforge.com/minecraft/mc-mods/cleancut
+Clear Despawn by StrikerRocker
+    - https://www.curseforge.com/minecraft/mc-mods/clear-despawn-fabric
+Clickable Advancements by someaddon
+    - https://www.curseforge.com/minecraft/mc-mods/clickable-advancements
+Client Tweaks by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/client-tweaks-fabric
+Clumps by Jaredlll08
+    - https://www.curseforge.com/minecraft/mc-mods/clumps/files
+Comforts by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/comforts-fabric
+Companion by Snownee_
+    - https://www.curseforge.com/minecraft/mc-mods/companion-fabric
+Connectible Chains by legoatoom
+    - https://www.curseforge.com/minecraft/mc-mods/connectible-chains
+Continuity by Pepper_Bell
+    - https://www.curseforge.com/minecraft/mc-mods/continuity
+Controlling by Jaredlll08
+    - https://www.curseforge.com/minecraft/mc-mods/controlling
+Cosmetic Armor by Apace100
+    - https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-fabric
+Couplings by HeckinChloe
+    - https://www.curseforge.com/minecraft/mc-mods/couplings
+Craftable Horse Armor & Saddle by EwyBoy
+    - https://www.curseforge.com/minecraft/mc-mods/cha-s
+Crafting Tweaks by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-fabric
+Crawl by fewizz_
+    - https://www.curseforge.com/minecraft/mc-mods/crawl
+Create by simibubi (ported to Fabric by tropheusj)
+    - https://www.curseforge.com/minecraft/mc-mods/create-fabric
+Create Crafts & Additions by MRHminer
+    - https://www.curseforge.com/minecraft/mc-mods/createaddition
+Creeper Overhaul by joosh_7889
+    - https://www.curseforge.com/minecraft/mc-mods/creeper-overhaul
+Cull Leaves by Motschen
+    - https://www.curseforge.com/minecraft/mc-mods/cull-leaves
+Dashloader by notequalalpha
+    - https://www.curseforge.com/minecraft/mc-mods/dashloader
+DeathLog by gloscowo
+    - https://www.curseforge.com/minecraft/mc-mods/deathlog
+Debugify by XanderIsDev
+    - https://www.curseforge.com/minecraft/mc-mods/debugify
+Deepslate Cutting by NoComment1105
+    - https://www.curseforge.com/minecraft/mc-mods/deepslatecutting
+Diagonal Panes by magneticflux_
+    - https://www.curseforge.com/minecraft/mc-mods/diagonal-panes
+Dimension Fix (Some Forge Patches Ported) by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/dimension-fix-some-forge-patches-ported
+Disable Custom Worlds Advice by rdvdev2
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-disable-custom-worlds-advice
+Drip Sounds by PieKing1215
+    - https://www.curseforge.com/minecraft/mc-mods/dripsounds-fabric
+Drippy Loading Screen by Keksuccino
+    - https://www.curseforge.com/minecraft/mc-mods/drippy-loading-screen-fabric
+Dual Riders by Flytre7
+    - https://www.curseforge.com/minecraft/mc-mods/dual-riders
+Duckling by Frogipher
+    - https://www.curseforge.com/minecraft/mc-mods/duckling
+Dyed by yurisuika
+    - https://www.curseforge.com/minecraft/mc-mods/dyed
+Dynamic FPS by juliand665
+    - https://www.curseforge.com/minecraft/mc-mods/dynamic-fps
+Easy Magic by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/easy-magic-fabric
+Eating Animation by theone_ss
+    - https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric
+Ecologics by SameDifferent
+    - https://www.curseforge.com/minecraft/mc-mods/ecologics
+Eden Ring by paulevs
+    - https://www.curseforge.com/minecraft/mc-mods/eden-ring
+EditSign by RakSrinaNa
+    - https://www.curseforge.com/minecraft/mc-mods/edit-sign
+Effective by doctor4t
+    - https://www.curseforge.com/minecraft/mc-mods/effective/
+Egg Tab by florensie
+    - https://www.curseforge.com/minecraft/mc-mods/eggtab-fabric
+Emotecraft by KosmX
+    - https://www.curseforge.com/minecraft/mc-mods/emotecraft
+Enchantment Descriptions by DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions
+End Goblin Traders by jab125twitchy
+    - https://www.curseforge.com/minecraft/mc-mods/end-goblin-traders-fabric
+Equipment Compare by Grend_G
+    - https://www.curseforge.com/minecraft/mc-mods/equipment-compare-fabric
+Extended Armor Bars by RebelKeithy (forked by Slugstur for 1.18.2)
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-extended-armor-bars-forked
+Fabric Emotes by AlgidSpace
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-emotes
+Farmer's Delight by vectorwing (ported to Fabric by NewHoryzon)
+    - https://www.curseforge.com/minecraft/mc-mods/farmers-delight-fabric
+Falling Leaves by RandomMcSomethin
+    - https://www.curseforge.com/minecraft/mc-mods/falling-leaves-fabric
+Falling Tree by RakSrinaNa
+    - https://www.curseforge.com/minecraft/mc-mods/falling-tree
+Fancy Menu by Keksuccino
+    - https://www.curseforge.com/minecraft/mc-mods/fancymenu-fabric
+FerriteCore by malte0811
+    - https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric
+Firework Frenzy by Camellias_
+    - https://www.curseforge.com/minecraft/mc-mods/firework-frenzy
+Friendly Fire by DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/friendly-fire
+Goblin Traders by MrCrayfish (ported by to Fabric by jab125twitchy)
+    - https://www.curseforge.com/minecraft/mc-mods/goblin-traders-fabric
+Goodall by Frogipher
+    - https://www.curseforge.com/minecraft/mc-mods/goodall/
+Grizzly Bear Mod by AqUpd
+    - https://www.curseforge.com/minecraft/mc-mods/grizzly-bear
+Hedgehogs by orcinus73
+    - https://www.curseforge.com/minecraft/mc-mods/hedgehogs-fabric
+Horse Stats Vanilla by TeaJ4y
+    - https://www.curseforge.com/minecraft/mc-mods/horsestatsvanilla
+I Know What I'm Doing (IKWID) by KechinChloe
+    - https://www.curseforge.com/minecraft/mc-mods/i-know-what-im-doing
+Illuminations by doctor4t
+    - https://www.curseforge.com/minecraft/mc-mods/illuminations
+Impaled by doctor4t
+    - https://www.curseforge.com/minecraft/mc-mods/impaled
+Indium by comp500
+    - https://www.curseforge.com/minecraft/mc-mods/indium
+InvMove by PieKing1215
+    - https://www.curseforge.com/minecraft/mc-mods/invmove
+InvMove-Compats by PieKing1215
+    - https://www.curseforge.com/minecraft/mc-mods/invmovecompats
+Iris Shaders by coderbot
+    - https://www.curseforge.com/minecraft/mc-mods/irisshaders
+Iron Chests by ProgWML6
+    - https://www.curseforge.com/minecraft/mc-mods/iron-chests
+Item Model Fix by Pepper_Bell
+    - https://www.curseforge.com/minecraft/mc-mods/item-model-fix
+Jade by Snownee_
+    - https://www.curseforge.com/minecraft/mc-mods/jade
+KleeSlabs by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/kleeslabs-fabric
+LAN Server Properties by rikka0w0
+    - https://www.curseforge.com/minecraft/mc-mods/lan-server-properties
+LambDynamicLights by LambdAurora
+    - https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights
+LazyDFU by tuxed
+    - https://www.curseforge.com/minecraft/mc-mods/lazydfu
+Lithium by jellysquid3_ (maintaned by 2No2Name)
+    - https://www.curseforge.com/minecraft/mc-mods/lithium
+Lovely Snails by LambdAurora
+    - https://www.curseforge.com/minecraft/mc-mods/lovely-snails
+Mannequins by moonflowerteam
+    - https://www.curseforge.com/minecraft/mc-mods/mannequins
+MemoryLeakFix by FX_PR0CESS
+    - https://www.curseforge.com/minecraft/mc-mods/memoryleakfix
+Merchant Markers Grend_G
+    - https://www.curseforge.com/minecraft/mc-mods/merchant-markers-fabric
+MmmMmmMmmMmm (Target Dummy) by MehVahdJukaar
+    - https://www.curseforge.com/minecraft/mc-mods/mmmmmmmmmmmm
+Mod Menu by ProspectorDev (maintained by jackassmc)
+    - https://www.curseforge.com/minecraft/mc-mods/modmenu
+More Axolotl Variants Mod by Akashii_Kun_
+    - https://www.curseforge.com/minecraft/mc-mods/mavm
+More Banner Features by KxmischesDomi
+    - https://www.curseforge.com/minecraft/mc-mods/more-banner-features
+More Geodes by TheDeathlyCow
+    - https://www.curseforge.com/minecraft/mc-mods/emerald-geodes
+More Villagers by SameDifferent
+    - https://www.curseforge.com/minecraft/mc-mods/more-villagers-fabric
+Mouse Tweaks by YaLTeR
+    - https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks
+Moyai by MehVahdJukaar
+    - https://www.curseforge.com/minecraft/mc-mods/moyai
+Natures Compass by Chaosyr
+    - https://www.curseforge.com/minecraft/mc-mods/natures-compass
+Nears by DigitalPear_11
+    - https://www.curseforge.com/minecraft/mc-mods/nears
+Nether Portal Fix by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/netherportalfix-fabric
+NoExpensive by Enaium
+    - https://www.curseforge.com/minecraft/mc-mods/noexpensive
+Not Enough Animations by tr9zw
+    - https://www.curseforge.com/minecraft/mc-mods/not-enough-animations
+Oh The Biomes You'll Go Refabricated by AOCAWOL, Corgi Taco, YaBoiChips
+    - https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go-fabric
+On Soul Fire by MoriyaShiine
+    - https://www.curseforge.com/minecraft/mc-mods/on-soul-fire
+Paintings ++ by AbsolemJackdaw
+    - https://www.curseforge.com/minecraft/mc-mods/on-soul-fire
+Paradise Lost by Immortal Devs
+    - https://www.curseforge.com/minecraft/mc-mods/paradise-lost
+Phosphor by jellysquid3_ (maintained by PhiPro95)
+    - https://www.curseforge.com/minecraft/mc-mods/phosphor
+Pick Up Notifier by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier-fabric
+Pick Your Poison by doctor4t
+    - https://www.curseforge.com/minecraft/mc-mods/pick-your-poison
+Pling by haykam
+    - https://www.curseforge.com/minecraft/mc-mods/pling
+Polymorph by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/polymorph-fabric
+Presence Footsteps by S0llace
+    - https://www.curseforge.com/minecraft/mc-mods/presence-footsteps
+Roughly Enough Items (REI) by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items
+Roughly Enough Professions (REP) by Mrbysco
+    - https://www.curseforge.com/minecraft/mc-mods/roughly-enough-professions-rep
+Roughly Enough Resources (RER) by theorbagain
+    - https://www.curseforge.com/minecraft/mc-mods/roughly-enough-resources
+Raised by yurisuika
+    - https://www.curseforge.com/minecraft/mc-mods/raised
+Rare Ice by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/rare-ice
+Rats Mischief by doctor4t
+    - https://www.curseforge.com/minecraft/mc-mods/rats-mischief
+Reroll by Draylar1
+    - https://www.curseforge.com/minecraft/mc-mods/reroll
+Respawnable Pets by MoriyaShiine
+    - https://www.curseforge.com/minecraft/mc-mods/respawnable-pets
+RightClickHarvest by jamalam360
+    - https://www.curseforge.com/minecraft/mc-mods/rightclickharvest/
+Rotten Flesh To Leather by LilyLicht
+    - https://modrinth.com/mod/rottenfleshtoleather/version/1.18-1.0
+Salutem (Healthbars) by Flytre7
+    - https://www.curseforge.com/minecraft/mc-mods/salutem
+Saplanting by MUYU_Twilighter
+    - https://www.curseforge.com/minecraft/mc-mods/saplanting
+Show Me What You Got by Apace100
+    - https://www.curseforge.com/minecraft/mc-mods/show-me-what-you-got
+Simple Voice Chat by henkelmax
+    - https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat
+Sit by bl4ckscor3
+    - https://www.curseforge.com/minecraft/mc-mods/sit
+Situational Crosshair by zaorlando
+    - https://www.curseforge.com/minecraft/mc-mods/crosshair-mod
+Skin Layers 3D by tr9zw
+    - https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d
+Smooth Boot by UltimateBoomer
+    - https://www.curseforge.com/minecraft/mc-mods/smooth-boot
+Sodium by jellysquid3_ (maintained by IMS21)
+    - https://www.curseforge.com/minecraft/mc-mods/sodium
+Sound Physics Remastered by henkelmax
+    - https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered
+Stoneholm, Underground Villages by TheGrimsey
+    - https://www.curseforge.com/minecraft/mc-mods/stoneholm
+The Bumblezone by telepathicgrunt
+    - https://www.curseforge.com/minecraft/mc-mods/the-bumblezone-fabric
+The Graveyard by finallion_13
+    - https://www.curseforge.com/minecraft/mc-mods/the-graveyard-fabric
+The Graveyard Biomes by finallion_13
+    - https://www.curseforge.com/minecraft/mc-mods/the-graveyard-biomes-fabric
+Tips by DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/tips
+Tool Stats DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/tool-stats
+Trading Post Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/trading-post-fabric
+TrashSlot by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/trashslot
+Traveler's Titles by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/travelers-titles-fabric
+Tumbleweed by bconv
+    - https://www.curseforge.com/minecraft/mc-mods/tumbleweed
+Twigs by ninnih_
+    - https://www.curseforge.com/minecraft/mc-mods/twigs
+Twilight Forest by Benimatic
+    - https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest
+Universal Bone Meal by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal-fabric
+Universal Ores by Hugman_76
+    - https://www.curseforge.com/minecraft/mc-mods/universal-ores-fabric
+Unvoted & Shelved by dopadreaming
+    - https://www.curseforge.com/minecraft/mc-mods/unvoted-shelved
+Vanilla Degus by minet6759_
+    - https://www.curseforge.com/minecraft/mc-mods/vanilla-degus
+Variant Crafting Tables by XanthianZ
+    - https://www.curseforge.com/minecraft/mc-mods/variant-crafting-tables-fabric
+Vein Mining by TheIllusiveC4
+    - https://www.curseforge.com/minecraft/mc-mods/vein-mining-fabric
+Visual Workbench by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/visual-workbench-fabric
+Visuality by PinkGoosik
+    - https://www.curseforge.com/minecraft/mc-mods/visuality
+Wandering Collector by Siphalor
+    - https://www.curseforge.com/minecraft/mc-mods/wandering-collector
+Wavey Capes by tr9zw
+    - https://www.curseforge.com/minecraft/mc-mods/waveycapes
+Waystones by LordDeatHunter
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-waystones
+Wolves With Armor by Draylar1
+    - https://www.curseforge.com/minecraft/mc-mods/wolves-with-armor
+WorldEdit by sk89q
+    - https://www.curseforge.com/minecraft/mc-mods/worldedit
+XL Packets by tfarecnim
+    - https://www.curseforge.com/minecraft/mc-mods/xl-packets-fabric
+Xaero's Minimap by xaero96
+    - https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
+Xaero's World Map by xaero96
+    - https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map
+YUNG's Better Desert Temples by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-better-desert-temples-fabric
+YUNG's Better Dungeons by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-better-dungeons-fabric
+YUNG's Better Mineshafts by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts-fabric
+YUNG's Better Strongholds by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds-fabric
+YUNG's Extras by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-extras-fabric
+Zoomify by XanderIsDev
+    - https://www.curseforge.com/minecraft/mc-mods/zoomify
+
+
+    ## APIs/Libraries/Dependencies ##
+
+Architectury API by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/architectury-api
+Auudio by Keksuccino
+    - https://www.curseforge.com/minecraft/mc-mods/auudio-fabric/
+Balm by BlayTheNinth
+    - https://www.curseforge.com/minecraft/mc-mods/balm-fabric
+BCLib by paulevs (maintained by Quiqueck and Bulldog83)
+    - https://www.curseforge.com/minecraft/mc-mods/bclib
+Bookshelf by DarkhaxDev
+    - https://www.curseforge.com/minecraft/mc-mods/bookshelf
+Cloth Config API by shedaniel
+    - https://www.curseforge.com/minecraft/mc-mods/cloth-config
+CreativeCore by CreativeMD
+    - https://www.curseforge.com/minecraft/mc-mods/creativecore
+Dawn API by Hugman_76
+    - https://www.curseforge.com/minecraft/mc-mods/dawn
+Fabric API by modmuss50
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-api
+Fabric Language Kotlin by modmuss50
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin
+Fabric Shield Lib by CrimsonDawn45
+    - https://www.curseforge.com/minecraft/mc-mods/fabric-shield-lib
+Feature NBT Deadlock Be Gone by telepathicgrunt
+    - https://www.curseforge.com/minecraft/mc-mods/feature-nbt-deadlock-be-gone
+Flytre Lib by Flytre7
+    - https://www.curseforge.com/minecraft/mc-mods/lib
+Forge Config API Port by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric
+GeckoLib by ThanosGecko
+    - https://www.curseforge.com/minecraft/mc-mods/geckolib
+Iceberg by Grend_G
+    - https://www.curseforge.com/minecraft/mc-mods/iceberg-fabric
+JamLib by jamalam360
+    - https://www.curseforge.com/minecraft/mc-mods/jamlib
+Konkrete by Keksuccino
+    - https://www.curseforge.com/minecraft/mc-mods/konkrete-fabric
+Library Ferret by jtl_elisa
+    - https://www.curseforge.com/minecraft/mc-mods/library-ferret-fabric
+Load My Resources by Keksuccino
+    - https://www.curseforge.com/minecraft/mc-mods/load-my-resources-fabric
+Pollen by moonflowerteam
+    - https://www.curseforge.com/minecraft/mc-mods/pollen
+Puzzles Lib by Fuzs_
+    - https://www.curseforge.com/minecraft/mc-mods/puzzles-lib
+Terrablender by TheAdubbz and GlitchfiendMods
+    - https://www.curseforge.com/minecraft/mc-mods/terrablender-fabric
+ThonkUtil by jab125twitchy
+    - https://www.curseforge.com/minecraft/mc-mods/thonkutil
+Trinkets by EmilyPloszaj
+    - https://www.curseforge.com/minecraft/mc-mods/trinkets
+YUNG's API by YUNGNICKYOUNG
+    - https://www.curseforge.com/minecraft/mc-mods/yungs-api-fabric
