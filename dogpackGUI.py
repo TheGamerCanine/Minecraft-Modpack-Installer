@@ -15,16 +15,20 @@ import shutil
 try:
     from ttkthemes import ThemedTk
 except ModuleNotFoundError:
+    print('Python needs to install some dependencies before the program can run.')
     os.system('pip3 install -r requirements.txt')
     from ttkthemes import ThemedTk
 
 
+def define_modpack_dir():
+    global modpackFileDir
+    modpackFileDir = f'modpackfiles/{modpackOption.get()}'
+
 def define_mods():
     global modpackURL
     global modpackNames
-    global modpackFileDir
+    define_modpack_dir()
     # Define folder containing modpack info, dump names and URLs for the mods into their own list elements.
-    modpackFileDir = f'modpackfiles/{modpackOption.get()}'
     with open(f'{modpackFileDir}/modpackURL', 'r') as f:
         modpackURL = [line.strip() for line in f]
     with open(f'{modpackFileDir}/modpackNames', 'r') as f:
@@ -32,7 +36,7 @@ def define_mods():
 
 def install_modloader():
     # Define a folder the modloader should be installed to, set a download URL and determine whether there are logs that need to be deleted or not.
-    modpackFileDir = f'modpackfiles/{modpackOption.get()}'
+    define_modpack_dir()
     with open(f'{modpackFileDir}/modloaderInfo', 'r') as f:
         modloaderInfo = [line.strip() for line in f]
     # Alert the user if necessary
@@ -144,7 +148,8 @@ def extract_mods():
     Button(extWindow, text='Extract', command=extract_to_dir).grid(row=3, column=0, pady=2)
 
 def credits_txt():
-    webbrowser.open('credit.txt')
+    define_modpack_dir()
+    webbrowser.open(f'{modpackFileDir}/credit.txt')
 
 def dogsite():
     webbrowser.open('https://toucam.live')
@@ -208,9 +213,7 @@ elif platform.system() == 'Darwin':
     print('Installing for MacOS')
 
 # Check for Java
-try:
-    subprocess.call(['java', '-version'])
-except FileNotFoundError:
+if shutil.which('java') == None:
     messagebox.showwarning(title='Java not found.', message='Java 8+ must be installed before continuing!')
     webbrowser.open('https://www.java.com/download/ie_manual.jsp')
     sys.exit('Cannot install, quitting install.')
