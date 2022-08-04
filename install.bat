@@ -1,2 +1,2 @@
-python dogpackGUI.py
+python main.py
 pause

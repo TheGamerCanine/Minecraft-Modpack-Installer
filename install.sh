@@ -1,1 +1,1 @@
-python3 dogpackGUI.py
+python3 main.py
